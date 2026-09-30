@@ -1,0 +1,82 @@
+:root{
+  --plum:#430130;
+  --plum-dark:#2c0020;
+  --plum-tint:#f3e9ef;
+  --ink:#1c1c1c;
+  --gray:#5c5c5c;
+  --line:#e2e2e2;
+  --bg:#ffffff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Segoe UI",Arial,Helvetica,sans-serif;line-height:1.6;font-size:16px;
+}
+a{color:var(--plum);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+
+/* header */
+header{
+  position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);
+}
+.bar{max-width:1080px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:14px}
+.bar img{height:44px;width:auto}
+.brand{font-weight:700;font-size:20px;color:var(--plum);letter-spacing:.5px}
+.brand span{color:var(--ink);font-weight:400;font-size:13px;display:block;letter-spacing:0}
+nav{margin-left:auto;display:flex;gap:20px}
+nav a{color:var(--ink);font-size:14px;font-weight:600}
+nav a:hover{color:var(--plum);text-decoration:none}
+
+/* hero */
+.hero{color:#fff;text-align:center;background:linear-gradient(135deg,var(--plum),var(--plum-dark))}
+.hero .overlay{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:70px 20px;
+}
+.hero h1{font-size:40px;margin:0 0 8px;letter-spacing:1px}
+.hero p{font-size:18px;max-width:620px;margin:0 0 22px;color:#f0dbe8}
+.btn{
+  display:inline-block;background:var(--plum);color:#fff;padding:12px 26px;border-radius:3px;
+  font-weight:700;letter-spacing:.5px;border:1px solid rgba(255,255,255,.25)
+}
+.btn:hover{background:#5a0640;text-decoration:none}
+
+/* sections */
+section{max-width:1080px;margin:0 auto;padding:56px 20px;border-bottom:1px solid var(--line)}
+.sec-title{color:var(--plum);font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 6px}
+h2{font-size:28px;margin:0 0 18px}
+.lead{color:var(--gray);max-width:760px}
+
+.stat-row{display:flex;gap:34px;margin-top:22px;flex-wrap:wrap}
+.stat b{color:var(--plum);font-size:30px;display:block;line-height:1}
+.stat span{color:var(--gray);font-size:13px}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{border:1px solid var(--line);border-top:3px solid var(--plum);padding:18px 20px;border-radius:3px}
+.card h3{margin:0 0 6px;font-size:17px}
+.card p{margin:0;color:var(--gray);font-size:14px}
+
+/* team */
+.team{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.member{border:1px solid var(--line);border-top:3px solid var(--plum);border-radius:4px;background:#fff;text-align:center;padding:18px 12px}
+.member .name{font-weight:700;font-size:15px}
+.member .role{color:var(--plum);font-size:12px;font-weight:600;margin:4px 0 8px;text-transform:uppercase;letter-spacing:.5px}
+.member a{font-size:11px;color:var(--gray);word-break:break-all}
+
+/* contact */
+.contact-info h3{color:var(--plum);margin:0 0 4px;font-size:15px}
+.contact-info p{margin:0 0 16px;color:var(--gray)}
+
+/* footer */
+footer{background:var(--plum-dark);color:#e9d6e2;text-align:center;padding:22px;font-size:13px}
+footer a{color:#f0c9e2}
+
+@media(max-width:860px){
+  .svc{grid-template-columns:repeat(2,1fr)}
+  .team{grid-template-columns:repeat(2,1fr)}
+  nav{display:none}
+  .hero h1{font-size:30px}
+}
